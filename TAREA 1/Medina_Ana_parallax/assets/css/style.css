@@ -1,0 +1,191 @@
+:root{
+    --color-bg-start:#0f172a;
+    --color-bg-mid:#1e3a8a;
+    --color-bg-end:#2563eb;
+
+    --color-accent:#22d3ee;
+    --color-deep:#0f172a;
+    --color-text:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:linear-gradient(
+        to bottom,
+        var(--color-bg-start),
+        var(--color-bg-mid),
+        var(--color-bg-end)
+    );
+}
+
+#header{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:20px 80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+#header ul{
+    display:flex;
+}
+
+#header ul li{
+    list-style:none;
+    margin-left:20px;
+}
+
+#header ul li a{
+    text-decoration:none;
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active{
+    background:white;
+    color:#0f172a;
+}
+
+#hero{
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#hero::after{
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+    width:100%;
+    height:120px;
+
+    background:linear-gradient(
+        to top,
+        var(--color-deep),
+        transparent
+    );
+}
+
+#hero img{
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    pointer-events:none;
+}
+
+#hero-text{
+    position:absolute;
+
+    z-index:5;
+
+    text-align:center;
+
+    color:white;
+
+    text-shadow:3px 3px 10px black;
+}
+
+#hero-text h1{
+    font-size:7rem;
+}
+
+#hero-text span{
+    display:block;
+
+    font-size:1.3rem;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+}
+
+.btn-explore{
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:12px 40px;
+
+    background:#d8b4fe;
+    
+    color:#3b0f70;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:0.3s;
+}
+
+.btn-explore:hover{
+    transform:scale(1.08);
+}
+
+.content-section{
+    position:relative;
+
+    padding:100px;
+
+    background:var(--color-deep);
+
+    color:white;
+
+    z-index:20;
+}
+
+.content-section h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.content-section p{
+    font-size:1.2rem;
+    line-height:1.8;
+    max-width:900px;
+}

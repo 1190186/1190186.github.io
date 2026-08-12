@@ -1,0 +1,143 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+
+#app {
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #2d3748;
+}
+
+#subtitulo {
+  text-align: center;
+  color: #718096;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+
+
+.campo {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.4rem;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+
+#btn-calcular {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+#resultado {
+  text-align: center;
+}
+
+#imc-valor {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+#imc-categoria {
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+
+.cat-bajo-peso {
+  background: #bee3f8;
+  color: #2b6cb0;
+}
+
+.cat-normal {
+  background: #c6f6d5;
+  color: #276749;
+}
+
+.cat-sobrepeso {
+  background: #fefcbf;
+  color: #744210;
+}
+
+.cat-obesidad {
+  background: #fed7d7;
+  color: #9b2c2c;
+}
+
+
+#barra-imc {
+  height: 16px;
+  border-radius: 10px;
+  margin: 1rem 0;
+  background: linear-gradient(to right, #63b3ed, #68d391, #f6e05e, #fc8181);
+  position: relative;
+}
+
+#indicador {
+  position: absolute;
+  top: -6px;
+  width: 4px;
+  height: 28px;
+  background: #2d3748;
+  left: 0%;
+  transform: translateX(-50%);
+  transition: left 0.5s;
+}
+
+
+#btn-limpiar {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.7rem;
+  border: 2px solid #e2e8f0;
+  background: transparent;
+  color: #718096;
+  border-radius: 10px;
+  cursor: pointer;
+}

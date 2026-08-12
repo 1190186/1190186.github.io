@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Unit Converter - PixelToCode</title>
+  <meta name="description" content="Conversor de unidades CSS interactivo en tiempo real (px, rem, em, %, vw, vh).">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span class="material-symbols-outlined" style="color: var(--primary);">code</span>
+        <span class="font-headline-md" style="color: var(--primary);">PixelToCode</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="btn-icon" id="mobileMenuToggle" aria-label="Abrir Menú">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Desktop Sidebar -->
+    <aside class="desktop-sidebar">
+      <!-- Workspace Brand -->
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px; padding: 0 8px;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-container); color: var(--on-primary-container); display: flex; align-items: center; justify-content: center; font-weight: 800;">
+          PT
+        </div>
+        <div>
+          <h1 class="font-headline-md" style="font-weight: 800; color: var(--primary); font-size: 18px;">Project Workspace</h1>
+          <p class="font-label-caps" style="color: var(--on-surface-variant);">V1.0.4</p>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav style="display: flex; flex-direction: column; gap: 6px; flex: 1;">
+        <a href="index.html" class="nav-link">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="converter.html" class="nav-link active">
+          <span class="material-symbols-outlined">extension</span>
+          <span>Modules</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">widgets</span>
+          <span>Components</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">folder_open</span>
+          <span>Assets</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">school</span>
+          <span>Education</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">analytics</span>
+          <span>Analytics</span>
+        </a>
+      </nav>
+
+      <!-- Bottom Actions -->
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
+        <button class="btn btn-primary btn-full" style="margin-bottom: 8px;">
+          Upgrade Plan
+        </button>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">help</span>
+          <span>Help Center</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">logout</span>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-stage" style="display: flex; flex-direction: column; items-center: center; justify-content: center;">
+      <div class="main-stage-container" style="max-width: 672px; width: 100%;">
+        
+        <!-- Header area -->
+        <div style="margin-bottom: 32px; text-align: center;">
+          <h2 class="font-headline-lg" style="color: var(--on-background); margin-bottom: 8px;">CSS Unit Converter</h2>
+          <p class="font-body-md" style="color: var(--on-surface-variant);">
+            Convierte valores precisos entre px, rem, em, %, vw y vh.
+          </p>
+        </div>
+
+        <!-- Converter Main Card -->
+        <div class="card" style="padding: 32px;">
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-bottom: 24px;">
+            
+            <!-- Source Value & Unit Input -->
+            <div class="form-group">
+              <label class="font-label-caps form-label" for="inputValue">Valor de Origen</label>
+              <div class="form-control-wrapper">
+                <input class="form-input form-input-code" id="inputValue" type="number" value="16" placeholder="ej. 16" step="any">
+                <select class="form-select font-body-md" id="sourceUnit">
+                  <option value="px" selected>px</option>
+                  <option value="rem">rem</option>
+                  <option value="em">em</option>
+                  <option value="%">%</option>
+                  <option value="vw">vw</option>
+                  <option value="vh">vh</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Destination Unit Selector -->
+            <div class="form-group">
+              <label class="font-label-caps form-label" for="destUnit">Convertir A</label>
+              <select class="form-select-standalone font-body-md" id="destUnit" style="height: 48px;">
+                <option value="rem" selected>rem</option>
+                <option value="px">px</option>
+                <option value="em">em</option>
+                <option value="%">%</option>
+                <option value="vw">vw</option>
+                <option value="vh">vh</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Base Pixel Settings Bar -->
+          <div style="display: flex; align-items: center; justify-content: space-between; background-color: var(--surface-container-low); padding: 12px 16px; border-radius: var(--radius-md); margin-bottom: 24px; border: 1px solid var(--outline-variant);">
+            <label class="font-label-caps" style="color: var(--on-surface-variant);" for="basePxInput">Tamaño Base (Root Base Px):</label>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <input type="number" id="basePxInput" value="16" min="1" max="100" class="form-input-code" style="width: 60px; height: 32px; text-align: center; border: 1px solid var(--outline-variant); border-radius: var(--radius-sm); background: var(--surface-container-lowest);">
+              <span class="font-label-code" style="color: var(--on-surface-variant);">px</span>
+            </div>
+          </div>
+
+          <!-- Convert Button -->
+          <button class="btn btn-secondary btn-full" id="convertBtn" style="margin-bottom: 32px;">
+            <span class="material-symbols-outlined">sync_alt</span>
+            <span>Convertir</span>
+          </button>
+
+          <!-- Result Box -->
+          <div class="result-box" id="resultCard" style="cursor: pointer;" title="Haz clic para copiar el resultado">
+            <p class="font-label-caps" style="color: var(--on-surface-variant); margin-bottom: 8px;">Resultado (Clic para copiar)</p>
+            <div class="result-value" id="resultValue">
+              1<span class="unit">rem</span>
+            </div>
+            <p class="font-label-caps" id="calculationHint" style="color: var(--on-surface-variant); margin-top: 12px;">
+              Calculado basándose en 16px
+            </p>
+            
+            <!-- Decorative icon background -->
+            <div style="position: absolute; right: -24px; bottom: -24px; opacity: 0.08; pointer-events: none;">
+              <span class="material-symbols-outlined" style="font-size: 110px;">functions</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quick Reference Snippets -->
+        <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;" id="presetsGrid">
+          <div class="snippet-card" data-px="12">
+            <div class="snippet-val-primary">12px</div>
+            <div class="snippet-val-secondary">0.75rem</div>
+          </div>
+          <div class="snippet-card" data-px="16">
+            <div class="snippet-val-primary">16px</div>
+            <div class="snippet-val-secondary">1rem</div>
+          </div>
+          <div class="snippet-card" data-px="24">
+            <div class="snippet-val-primary">24px</div>
+            <div class="snippet-val-secondary">1.5rem</div>
+          </div>
+          <div class="snippet-card" data-px="32">
+            <div class="snippet-val-primary">32px</div>
+            <div class="snippet-val-secondary">2rem</div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav">
+      <a href="index.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">dashboard</span>
+        <span class="font-label-caps" style="font-size: 10px; margin-top: 2px;">Dash</span>
+      </a>
+      <a href="converter.html" class="mobile-nav-item active">
+        <span class="material-symbols-outlined">extension</span>
+        <span class="font-label-caps" style="font-size: 10px; margin-top: 2px;">Mods</span>
+      </a>
+      <a href="#" class="mobile-nav-item">
+        <span class="material-symbols-outlined">school</span>
+        <span class="font-label-caps" style="font-size: 10px; margin-top: 2px;">Edu</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/converter.js"></script>
+</body>
+</html>

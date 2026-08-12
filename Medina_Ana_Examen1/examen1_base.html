@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Examen Parcial 1 — Diseño Web 2 — USAP">
+    <title>Examen Parcial 1 | Diseño Web 2 — USAP</title>
+
+    <!-- ============================================================
+         TAREA 1: TIPOGRAFÍAS GOOGLE FONTS
+         ============================================================
+         INSTRUCCIÓN: Agrega aquí las etiquetas necesarias para cargar
+         dos tipografías desde Google Fonts:
+           - "Playfair Display" con pesos 400 y 700
+           - "Poppins" con pesos 300, 400 y 600
+
+         Recuerda incluir primero las etiquetas <link rel="preconnect">
+         para mejorar el rendimiento de carga.
+
+         EJEMPLO de estructura esperada (complétalo tú):
+         <link rel="preconnect" href="...">
+         <link rel="preconnect" href="..." crossorigin>
+         <link href="..." rel="stylesheet">
+    ============================================================ -->
+
+    <!-- TAREA 1 — Escribe tu código AQUÍ ↓ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- FIN TAREA 1 -->
+
+    <!-- Hoja de estilos del examen (no modificar esta línea) -->
+    <link rel="stylesheet" href="examen1_base.css">
+
+    <!-- Font Awesome 6.5.2 — Iconos vectoriales (no modificar esta línea) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- jQuery 3.7.1 desde CDN (no modificar esta línea) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <!-- ============================================================
+         SECCIÓN 1: HERO CON PARALLAX
+         Esta sección ya tiene su id y clase asignados.
+         Completa las propiedades CSS del parallax en examen1_base.css
+    ============================================================ -->
+    <header class="hero-parallax" id="hero">
+        <div class="hero-overlay">
+            <h1 id="titulo-principal" class="hero-titulo">Examen Parcial 1 — Diseño Web 2</h1>
+            <p class="hero-subtitulo">Aplicando JavaScript y jQuery &middot; 22 de Junio 2026</p>
+            <a href="#contenido" class="hero-btn">
+                <i class="fa-solid fa-chevron-down"></i> Explorar
+            </a>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         SECCIÓN 2: CONTENIDO PRINCIPAL
+    ============================================================ -->
+    <main id="contenido">
+
+        <!-- Sección de tarjetas de habilidades -->
+<section class="seccion-tarjetas" id="habilidades">
+    <h2 class="seccion-titulo">Habilidades Aprendidas</h2>
+
+    <!-- Las tres tarjetas tienen la clase "tarjeta"
+         Serán seleccionadas en la TAREA 6 con jQuery -->
+    <div class="grid-tarjetas">
+        <article class="tarjeta" id="tarjeta-html">
+            <div class="tarjeta-icono">
+                <!-- Ícono HTML5 con clase personalizada para color -->
+                <i class="fa-brands fa-html5 icon-html"></i>
+            </div>
+            <h3>HTML5 Semántico</h3>
+            <p>Estructura profesional usando etiquetas semánticas como 
+               <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, 
+               <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> 
+               y <code>&lt;footer&gt;</code>.
+            </p>
+        </article>
+
+        <article class="tarjeta" id="tarjeta-css">
+            <div class="tarjeta-icono">
+                <!-- Ícono CSS3 con clase personalizada para color -->
+                <i class="fa-brands fa-css3-alt icon-css"></i>
+            </div>
+            <h3>CSS3 Avanzado</h3>
+            <p>Efectos parallax, animaciones con <code>@keyframes</code>, 
+               Flexbox para layouts responsivos y tipografías desde Google Fonts.
+            </p>
+        </article>
+
+        <article class="tarjeta" id="tarjeta-js">
+            <div class="tarjeta-icono">
+                <!-- Ícono JavaScript con clase personalizada para color -->
+                <i class="fa-brands fa-square-js icon-js"></i>
+            </div>
+            <h3>JavaScript &amp; jQuery</h3>
+            <p>Captura de eventos, manipulación del DOM, generación dinámica 
+               de contenido y selectores con jQuery.
+            </p>
+        </article>
+    </div>
+</section>
+
+
+        <!-- Sección interactiva: evento y generación de contenido -->
+        <section class="seccion-interactiva" id="interactivo">
+            <h2 class="seccion-titulo">Zona Interactiva</h2>
+
+            <div class="interactivo-grid">
+                <!-- Panel del botón — TAREA 4 -->
+                <div class="panel-interactivo" id="panel-evento">
+                    <h3>
+                        <i class="fa-solid fa-computer-mouse"></i>
+                        Captura de Evento
+                    </h3>
+                    <p>Haz clic en el botón para capturar el evento.</p>
+                    <button id="btn-mostrar" class="btn-accion">
+                        <i class="fa-solid fa-bolt"></i> Hacer Clic Aquí
+                    </button>
+                    <!-- El texto de este párrafo cambiará al hacer clic (TAREA 4) -->
+                    <p id="mensaje-resultado" class="mensaje-resultado">
+                        <i class="fa-regular fa-clock"></i> Esperando evento...
+                    </p>
+                </div>
+
+                <!-- Panel de lista generada con JS — TAREA 5 -->
+                <div class="panel-interactivo" id="panel-lista">
+                    <h3>
+                        <i class="fa-solid fa-list-check"></i>
+                        Habilidades Generadas con JS
+                    </h3>
+                    <p>La siguiente lista fue creada dinámicamente con JavaScript:</p>
+                    <!-- Los <li> serán insertados aquí por JavaScript en TAREA 5 -->
+                    <ul id="lista-habilidades" class="lista-dinamica">
+                        <!-- TAREA 5: el JavaScript insertará los <li> aquí -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECCIÓN 3: VIDEO HTML5
+             TAREA 3: Completa la etiqueta <video> dentro del <div>
+        ============================================================ -->
+        <section class="seccion-video" id="seccion-video">
+            <h2 class="seccion-titulo">
+                <i class="fa-solid fa-film"></i> Video HTML5
+            </h2>
+            <p class="seccion-descripcion">El siguiente video fue implementado usando la etiqueta <code>&lt;video&gt;</code> de HTML5 con buenas prácticas profesionales.</p>
+
+            <div class="contenedor-video">
+                <!-- ================================================
+                     TAREA 3 — Escribe tu código AQUÍ ↓
+
+                     Crea la etiqueta <video> completa con:
+                       - Atributo "controls"
+                       - Atributo "poster" → "img/poster.jpg"
+                       - Atributo "preload" → "metadata"
+                       - URL para poster → https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=60
+                       - URL para formato mp4 →"https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+                       - URL para formato webm → "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                       - <source> para formato .mp4  (video/mi-video.mp4)
+                       - <source> para formato .webm (video/mi-video.webm)
+                       - Mensaje de texto para navegadores antiguos
+                       - URL para mensaje de texto para navegadores antiguos → "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+                ================================================ -->
+                <video controls
+       poster="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=60"
+       preload="auto">
+
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+            type="video/webm">
+
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+            type="video/mp4">
+
+    Tu navegador no soporta el elemento video.
+    <a href="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">
+        Descargar video
+    </a>
+
+</video>
+
+
+                <!-- FIN TAREA 3 -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         PIE DE PÁGINA
+    ============================================================ -->
+    <footer class="sitio-footer" id="footer">
+        <p>
+            <i class="fa-solid fa-graduation-cap"></i>
+            Diseño Web 2 &mdash; USAP &mdash; 22 de Junio del 2026
+        </p>
+        <p>Examen Parcial 1</p>
+    </footer>
+
+    <!-- Archivo JavaScript del examen (no modificar esta línea) -->
+    <script src="examen1_base.js"></script>
+
+</body>
+</html>

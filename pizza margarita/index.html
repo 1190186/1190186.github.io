@@ -1,0 +1,190 @@
+HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Receta: Pizza Margarita — Responsive</title>
+ <!-- Google Fonts: tipografías profesionales desde la nube -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link
+href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=
+Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+ <!-- Font Awesome 6: librería de íconos -->
+ <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ <!-- Nuestro archivo CSS -->
+ <link rel="stylesheet" href="css/styles_responsive.css">
+</head>
+<body>
+ <!-- El contenido se agrega en los siguientes pasos -->
+  <header>
+ <h1><i class="fa-solid fa-pizza-slice" aria-hidden="true"></i> Recetas
+Deliciosas</h1>
+ <nav aria-label="Navegación principal">
+ <ul>
+ <li><a href="#inicio"><i class="fa-solid fa-house"
+aria-hidden="true"></i><span>Inicio</span></a></li>
+ <li><a href="#ingredientes"><i class="fa-solid fa-list-check"
+aria-hidden="true"></i><span>Ingredientes</span></a></li>
+ <li><a href="#preparacion"><i class="fa-solid fa-fire-flame-curved"
+aria-hidden="true"></i><span>Preparación</span></a></li>
+ <li><a href="#tips"><i class="fa-solid fa-lightbulb"
+aria-hidden="true"></i><span>Tips</span></a></li>
+ </ul>
+ </nav>
+</header>
+
+<main>
+ <section id="inicio" class="hero">
+ <div class="hero-content">
+ <h2>Pizza Margarita Casera</h2>
+ <p>La pizza Margarita es una de las pizzas más clásicas y deliciosas
+de la cocina italiana.
+ Con ingredientes simples pero de calidad, podrás preparar en casa
+una auténtica pizza
+ que conquistará a toda tu familia.</p>
+ <p><strong>Tiempo de preparación:</strong> 30 minutos |
+ <strong>Tiempo de cocción:</strong> 15 minutos |
+ <strong>Porciones:</strong> 4 personas</p>
+ </div>
+ <!-- Video: historia de la Pizza Margarita -->
+ <div class="video-wrapper">
+ <iframe
+ src="https://www.youtube.com/embed/jQKyTHYlen0"
+ title="Breve historia de la Pizza Margarita"
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture"
+ allowfullscreen
+ loading="lazy">
+ </iframe>
+ </div>
+ </section>
+
+ <section id="ingredientes">
+ <h2>Ingredientes Necesarios</h2>
+ <div class="ingredientes-grid">
+ <div class="grupo-ingrediente">
+ <h3>Para la masa:</h3>
+ <ul>
+ <li>500g de harina de trigo</li>
+ <li>300ml de agua tibia</li>
+ <li>10g de levadura fresca</li>
+ <li>10g de sal</li>
+ <li>30ml de aceite de oliva</li>
+ </ul>
+ </div>
+ <div class="grupo-ingrediente">
+ <h3>Para la cobertura:</h3>
+ <ul>
+ <li>200g de salsa de tomate natural</li>
+ <li>250g de queso mozzarella fresco</li>
+ <li>Hojas de albahaca fresca</li>
+ <li>Aceite de oliva extra virgen</li>
+ <li>Sal y pimienta al gusto</li>
+ </ul>
+ </div>
+ </div>
+ </section>
+
+ <section id="preparacion">
+ <h2><i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+Proceso de Preparación</h2>
+ <article id="paso-1" class="paso-card">
+ <div class="paso-header">
+ <span class="paso-badge">Paso 1</span>
+ <h3>Preparar los ingredientes</h3>
+ </div>
+ <img src="assets/images/paso1.jpg" alt="Ingredientes de la pizza sobre
+la mesa">
+ <p>Reúne todos los ingredientes necesarios. Asegúrate de que el agua
+esté tibia
+ (no caliente) para activar correctamente la levadura. Pesa y mide
+todos los
+ ingredientes con precisión.</p>
+ </article>
+ <article id="paso-2" class="paso-card">
+ <div class="paso-header">
+ <span class="paso-badge">Paso 2</span>
+ <h3>Preparar y estirar la masa</h3>
+ </div>
+ <img src="assets/images/paso2.jpg" alt="Estirando la masa de pizza">
+ <p>Mezcla la harina con la sal. Disuelve la levadura en el agua tibia
+y agrégala
+ a la harina junto con el aceite. Amasa durante 10 minutos hasta
+obtener una masa
+ suave y elástica. Deja reposar 1 hora cubierta con un paño. Luego,
+estira la masa
+ con un rodillo hasta formar un círculo de aproximadamente 30cm de
+diámetro.</p>
+ </article>
+ <article id="paso-3" class="paso-card">
+ <div class="paso-header">
+ <span class="paso-badge">Paso 3</span>
+ <h3>Agregar los ingredientes</h3>
+ </div>
+ <img src="assets/images/paso3.jpg" alt="Agregando salsa y queso a la
+pizza">
+ <p>Extiende la salsa de tomate sobre la masa, dejando un borde de 2cm.
+Distribuye
+ el queso mozzarella cortado en rodajas finas. Añade un chorrito de
+aceite de
+ oliva y sazona con sal y pimienta al gusto.</p>
+ </article>
+ <article id="paso-4" class="paso-card">
+ <div class="paso-header">
+ <span class="paso-badge paso-badge--final">Paso 4</span>
+ <h3>Hornear y servir</h3>
+ </div>
+ <img src="assets/images/paso4.jpg" alt="Pizza margarita terminada">
+ <p>Precalienta el horno a 250°C. Hornea la pizza durante 12-15 minutos
+o hasta que
+ el borde esté dorado y el queso burbujeante. Retira del horno,
+decora con hojas
+ de albahaca fresca y un chorrito de aceite de oliva. ¡Sirve
+inmediatamente!</p>
+ </article>
+ </section>
+
+ <aside id="tips">
+ <h2><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Tips del
+Chef</h2>
+ <ul>
+ <li><strong>Masa perfecta:</strong> El secreto está en el amasado.
+Trabaja la masa
+ hasta que esté suave y no se pegue en las manos.</li>
+ <li><strong>Horno caliente:</strong> Un horno bien precalentado es
+esencial
+ para una pizza crujiente.</li>
+ <li><strong>Menos es más:</strong> No sobrecargues la pizza con
+ingredientes,
+ la Margarita es simple pero deliciosa.</li>
+ <li><strong>Ingredientes frescos:</strong> Usa mozzarella fresca y
+albahaca
+ recién cortada para el mejor sabor.</li>
+ </ul>
+ </aside>
+</main>
+<footer>
+ <div class="footer-social">
+ <a href="#" aria-label="Facebook"><i class="fa-brands
+fa-facebook"></i></a>
+ <a href="#" aria-label="Instagram"><i class="fa-brands
+fa-instagram"></i></a>
+ <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+ <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+ </div>
+ <p class="footer-handle"><i class="fa-solid fa-at"></i>recetasdeliciosas</p>
+ <p>&copy; 2026 Recetas Deliciosas. Todos los derechos reservados.</p>
+ <p>Contacto: <a
+href="mailto:info@recetasdeliciosas.com">info@recetasdeliciosas.com</a></p>
+ <p class="footer-love">
+ Hecho con <i class="fa-solid fa-heart" aria-label="amor"></i> en USAP por
+Diseño Web 2
+ </p>
+</footer>
+
+</body>
+</html>

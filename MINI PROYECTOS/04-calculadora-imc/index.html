@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC</title>
+   
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <div id="app">
+
+    <h1>⚖️ Calculadora de IMC</h1>
+    <p id="subtitulo">Índice de Masa Corporal</p>
+
+    <form id="formulario-imc">
+
+      <div class="campo">
+        <label for="peso">Peso (kg)</label>
+        <input type="number" id="peso" placeholder="Ej. 70" min="1" max="300">
+      </div>
+
+      <div class="campo">
+        <label for="altura">Altura (cm)</label>
+        <input type="number" id="altura" placeholder="Ej. 175" min="50" max="250">
+      </div>
+
+      <div class="campo">
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" placeholder="Ej. 25" min="1" max="120">
+      </div>
+
+      <div class="campo">
+        <label>Sexo</label>
+        <div id="grupo-sexo">
+          <label class="radio-label">
+            <input type="radio" name="sexo" value="masculino"> Masculino
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="sexo" value="femenino"> Femenino
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" id="btn-calcular">Calcular IMC</button>
+
+    </form>
+
+    <div id="resultado" style="display: none;">
+      <div id="imc-valor">--</div>
+      <div id="imc-categoria">--</div>
+      <div id="barra-imc">
+        <div id="indicador"></div>
+      </div>
+      <div id="tabla-categorias">
+        <p><span class="cat bajo-peso">Bajo peso</span> IMC &lt; 18.5</p>
+        <p><span class="cat normal">Normal</span> 18.5 – 24.9</p>
+        <p><span class="cat sobrepeso">Sobrepeso</span> 25 – 29.9</p>
+        <p><span class="cat obesidad">Obesidad</span> IMC ≥ 30</p>
+      </div>
+      <button id="btn-limpiar">Calcular de nuevo</button>
+    </div>
+
+  </div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

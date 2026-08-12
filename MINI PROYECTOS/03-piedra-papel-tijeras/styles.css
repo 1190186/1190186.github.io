@@ -1,0 +1,166 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+
+
+#app {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+
+
+#marcador {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.puntaje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nombre {
+  font-size: 0.9rem;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.numero {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #68d391;
+}
+
+
+
+#arena {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+#emoji-jugador,
+#emoji-pc {
+  font-size: 5rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+#vs {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e2e8f0;
+}
+
+
+
+#mensaje-resultado {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.ganaste {
+  background-color: rgba(72, 187, 120, 0.2);
+  border: 2px solid #48bb78;
+  color: #68d391;
+}
+
+.perdiste {
+  background-color: rgba(245, 101, 101, 0.2);
+  border: 2px solid #f56565;
+  color: #fc8181;
+}
+
+.empate {
+  background-color: rgba(237, 137, 54, 0.2);
+  border: 2px solid #ed8936;
+  color: #fbd38d;
+}
+
+
+
+#botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-opcion {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-opcion:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+.btn-opcion:active {
+  transform: scale(0.95);
+}
+
+
+#btn-reiniciar {
+  background-color: transparent;
+  border: 1px solid #718096;
+  color: #a0aec0;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+#btn-reiniciar:hover {
+  border-color: #a0aec0;
+  color: white;
+}

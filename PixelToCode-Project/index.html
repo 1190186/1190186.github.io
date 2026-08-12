@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelToCode Dashboard - Herramientas y Utilidades</title>
+  <meta name="description" content="Dashboard principal de PixelToCode. Plataforma educacional e interactiva de diseño a código.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span class="material-symbols-outlined" style="color: var(--primary);">design_services</span>
+        <span class="font-headline-md" style="color: var(--primary);">PixelToCode</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="btn-icon" id="mobileMenuToggle" aria-label="Abrir Menú">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Desktop Sidebar -->
+    <aside class="desktop-sidebar">
+      <!-- Workspace Brand -->
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px; padding: 0 8px;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-container); color: var(--on-primary-container); display: flex; align-items: center; justify-content: center; font-weight: 800;">
+          PT
+        </div>
+        <div>
+          <h1 class="font-headline-md" style="font-weight: 800; color: var(--primary); font-size: 18px;">Project Workspace</h1>
+          <p class="font-label-caps" style="color: var(--on-surface-variant);">V1.0.4</p>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav style="display: flex; flex-direction: column; gap: 6px; flex: 1;">
+        <a href="index.html" class="nav-link active">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="converter.html" class="nav-link">
+          <span class="material-symbols-outlined">extension</span>
+          <span>Modules</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">widgets</span>
+          <span>Components</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">folder_open</span>
+          <span>Assets</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">school</span>
+          <span>Education</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">analytics</span>
+          <span>Analytics</span>
+        </a>
+      </nav>
+
+      <!-- Bottom Actions -->
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
+        <button class="btn btn-primary btn-full" style="margin-bottom: 8px;">
+          Upgrade Plan
+        </button>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">help</span>
+          <span>Help Center</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="material-symbols-outlined">logout</span>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-stage">
+      <div class="main-stage-container">
+        
+        <!-- Header Title Section -->
+        <header style="margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h2 class="font-headline-lg" style="color: var(--on-background);">Tools & Utilities</h2>
+            <p class="font-body-md" style="color: var(--on-surface-variant); margin-top: 4px;">
+              Una colección curada de recursos para acelerar tu flujo de trabajo de Pixel a Código.
+            </p>
+          </div>
+          
+          <!-- Desktop Quick Actions -->
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <button class="btn-icon" style="border: 1px solid var(--outline-variant);" title="Notificaciones">
+              <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <div style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 2px solid var(--outline-variant);">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar Usuario" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </header>
+
+        <!-- Tools Grid -->
+        <section style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;">
+          
+          <!-- Card 1: CSS Unit Converter -->
+          <a href="converter.html" class="card tool-card">
+            <div class="tool-card-icon">
+              <span class="material-symbols-outlined">straighten</span>
+            </div>
+            <h3 class="font-headline-md" style="color: var(--on-background); margin-bottom: 4px;">CSS Unit Converter</h3>
+            <p class="font-label-caps" style="color: var(--outline); margin-bottom: 12px;">Conversor de Unidades CSS</p>
+            <p class="font-body-md" style="color: var(--on-surface-variant); margin-bottom: 20px; flex: 1;">
+              Convierte fácilmente entre valores px, rem, em, %, vw y vh basándote en una unidad base configurable.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+              <span class="chip">Utility</span>
+              <span class="material-symbols-outlined" style="color: var(--primary);">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Card 2: Color Contrast Checker -->
+          <a href="#" class="card tool-card" onclick="alert('Módulo de Verificación de Contraste en desarrollo.'); return false;">
+            <div class="tool-card-icon">
+              <span class="material-symbols-outlined">contrast</span>
+            </div>
+            <h3 class="font-headline-md" style="color: var(--on-background); margin-bottom: 4px;">Color Contrast Checker</h3>
+            <p class="font-label-caps" style="color: var(--outline); margin-bottom: 12px;">Verificador de Contraste de Color</p>
+            <p class="font-body-md" style="color: var(--on-surface-variant); margin-bottom: 20px; flex: 1;">
+              Asegura que tus combinaciones de colores cumplan con las normas WCAG de accesibilidad y legibilidad.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+              <span class="chip">Accessibility</span>
+              <span class="material-symbols-outlined" style="color: var(--outline);">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Card 3: Box Model Visualizer -->
+          <a href="#" class="card tool-card" onclick="alert('Módulo Box Model Visualizer en desarrollo.'); return false;">
+            <div class="tool-card-icon">
+              <span class="material-symbols-outlined">view_in_ar</span>
+            </div>
+            <h3 class="font-headline-md" style="color: var(--on-background); margin-bottom: 4px;">Box Model Visualizer</h3>
+            <p class="font-label-caps" style="color: var(--outline); margin-bottom: 12px;">Visualizador de Box Model</p>
+            <p class="font-body-md" style="color: var(--on-surface-variant); margin-bottom: 20px; flex: 1;">
+              Playground interactivo para comprender márgenes, bordes, rellenos y dimensiones de contenido.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+              <span class="chip">Layout</span>
+              <span class="material-symbols-outlined" style="color: var(--outline);">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Card 4: Flexbox / Grid Playground -->
+          <a href="#" class="card tool-card" onclick="alert('Módulo Flexbox & Grid en desarrollo.'); return false;">
+            <div class="tool-card-icon">
+              <span class="material-symbols-outlined">grid_view</span>
+            </div>
+            <h3 class="font-headline-md" style="color: var(--on-background); margin-bottom: 4px;">Flexbox / Grid Playground</h3>
+            <p class="font-label-caps" style="color: var(--outline); margin-bottom: 12px;">Playground de Flexbox / Grid</p>
+            <p class="font-body-md" style="color: var(--on-surface-variant); margin-bottom: 20px; flex: 1;">
+              Experimenta con disposiciones Flexbox y Grid de manera visual antes de escribir el código final.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+              <span class="chip">Layout</span>
+              <span class="material-symbols-outlined" style="color: var(--outline);">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Card 5: Typographic Scale Calculator -->
+          <a href="#" class="card tool-card" onclick="alert('Módulo Typographic Scale Calculator en desarrollo.'); return false;">
+            <div class="tool-card-icon">
+              <span class="material-symbols-outlined">format_size</span>
+            </div>
+            <h3 class="font-headline-md" style="color: var(--on-background); margin-bottom: 4px;">Typographic Scale</h3>
+            <p class="font-label-caps" style="color: var(--outline); margin-bottom: 12px;">Calculadora de Escala Tipográfica</p>
+            <p class="font-body-md" style="color: var(--on-surface-variant); margin-bottom: 20px; flex: 1;">
+              Genera jerarquías de escala armónicas y proporcionales para tus diseños responsivos.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+              <span class="chip">Typography</span>
+              <span class="material-symbols-outlined" style="color: var(--outline);">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Card 6: Asset Optimizer -->
+          <a href="#" class="card tool-card" onclick="alert('Módulo Asset Optimizer en desarrollo.'); return false;">
+            <div class="tool-card-icon">
+              <span class="material-symbols-outlined">folder_zip</span>
+            </div>
+            <h3 class="font-headline-md" style="color: var(--on-background); margin-bottom: 4px;">Asset Optimizer</h3>
+            <p class="font-label-caps" style="color: var(--outline); margin-bottom: 12px;">Optimizador de Recursos</p>
+            <p class="font-body-md" style="color: var(--on-surface-variant); margin-bottom: 20px; flex: 1;">
+              Comprime y exporta elementos gráficos vectoriales y de mapa de bits optimizados para la web.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+              <span class="chip">Assets</span>
+              <span class="material-symbols-outlined" style="color: var(--outline);">arrow_forward</span>
+            </div>
+          </a>
+
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav">
+      <a href="index.html" class="mobile-nav-item active">
+        <span class="material-symbols-outlined">dashboard</span>
+        <span class="font-label-caps" style="font-size: 10px; margin-top: 2px;">Dash</span>
+      </a>
+      <a href="converter.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">extension</span>
+        <span class="font-label-caps" style="font-size: 10px; margin-top: 2px;">Mods</span>
+      </a>
+      <a href="#" class="mobile-nav-item">
+        <span class="material-symbols-outlined">school</span>
+        <span class="font-label-caps" style="font-size: 10px; margin-top: 2px;">Edu</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

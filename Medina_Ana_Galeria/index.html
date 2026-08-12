@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería animada de canciones favoritas con CSS3">
+    <title>Canciones Favoritas - Galería Animada</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+    <header class="encabezado">
+        <div class="titulo-con-logo">
+    <img src="img/logo.png" alt="Logo" class="logo">
+        <h1 class="maquina">Canciones de Olivia Rodrigo</h1>
+        <p>Las mejores canciones para mí</p>
+          </div>
+    </header>
+
+    <main>
+
+        <section class="galeria" aria-label="Galería canciones Favoritas">
+
+            <!-- TARJETA 1 -->
+            <article class="tarjeta">
+                <div class="imagen">
+                    <img src="img/thecure.png" alt="The Cure">
+                    <span class="etiqueta">You Seem Pretty Sad For a Girl So in Love</span>
+                </div>
+
+                <div class="contenido">
+                    <h3>The Cure</h3>
+                    <p>Mito de que el amor romántico es una cura mágica para todos nuestros problemas personales.</p>
+                    <a href="#" class="boton">Ver álbum</a>
+                </div>
+            </article>
+
+            <!-- TARJETA 2 -->
+            <article class="tarjeta">
+                <div class="imagen">
+                    <img src="img/drivers.png" alt="Drivers License">
+                    <span class="etiqueta">Sour</span>
+                </div>
+
+                <div class="contenido">
+                    <h3>Drivers License</h3>
+                    <p>Dolor de una ruptura amorosa adolescente y la soledad después de obtener su licencia.</p>
+                    <a href="#" class="boton">Ver álbum</a>
+                </div>
+            </article>
+
+            <!-- TARJETA 3 -->
+            <article class="tarjeta">
+                <div class="imagen">
+                    <img src="img/dejavu.png" alt="Deja Vu">
+                    <span class="etiqueta">Sour</span>
+                </div>
+
+                <div class="contenido">
+                    <h3>Deja Vu</h3>
+                    <p>Frustración de ver a un ex repetir los mismos recuerdos con otra persona.</p>
+                    <a href="#" class="boton">Ver álbum</a>
+                </div>
+            </article>
+
+            <!-- TARJETA 4 -->
+            <article class="tarjeta">
+                <div class="imagen">
+                    <img src="img/vampire.jpg" alt="Vampire">
+                    <span class="etiqueta">GUTS</span>
+                </div>
+
+                <div class="contenido">
+                    <h3>Vampire</h3>
+                    <p>Relación tóxica usando la metáfora de un vampiro emocional.</p>
+                    <a href="#" class="boton">Ver álbum</a>
+                </div>
+            </article>
+
+            <!-- TARJETA 5 -->
+            <article class="tarjeta">
+                <div class="imagen">
+                    <img src="img/dropdead.jpg" alt="Drop Dead">
+                    <span class="etiqueta">You Seem Pretty Sad For a Girl So in Love</span>
+                </div>
+
+                <div class="contenido">
+                    <h3>Drop Dead</h3>
+                    <p>Emoción intensa al conocer a alguien y obsesión inicial.</p>
+                    <a href="#" class="boton">Ver álbum</a>
+                </div>
+            </article>
+
+            <!-- TARJETA 6 -->
+            <article class="tarjeta">
+                <div class="imagen">
+                    <img src="img/honeybee.png" alt="Honeybee">
+                    <span class="etiqueta">You Seem Pretty Sad For a Girl So in Love</span>
+                </div>
+
+                <div class="contenido">
+                    <h3>Honeybee</h3>
+                    <p>El miedo a amar y la vulnerabilidad en una nueva conexión.</p>
+                    <a href="#" class="boton">Ver álbum</a>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Ana Medina — Diseño Web II — 2026</p>
+    </footer>
+
+
+    <script>
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        document.getElementById("loader").style.display = "none";
+    }, 300);
+});
+</script>
+
+</body>
+</html>

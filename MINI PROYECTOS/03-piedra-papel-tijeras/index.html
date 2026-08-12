@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piedra, Papel o Tijeras</title>
+   
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piedra, Papel o Tijeras</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+</head>
+
+<body>
+
+  <div id="app">
+
+    <h1>✊ ✋ ✌️ Piedra, Papel o Tijeras</h1>
+
+    <div id="marcador">
+      <div class="puntaje" id="puntaje-jugador">
+        <span class="nombre">Tú</span>
+        <span class="numero" id="score-jugador">0</span>
+      </div>
+      <div class="puntaje" id="puntaje-empates">
+        <span class="nombre">Empates</span>
+        <span class="numero" id="score-empates">0</span>
+      </div>
+      <div class="puntaje" id="puntaje-pc">
+        <span class="nombre">PC</span>
+        <span class="numero" id="score-pc">0</span>
+      </div>
+    </div>
+
+    <div id="arena">
+      <div id="eleccion-jugador">
+        <p>Tu elección</p>
+        <span id="emoji-jugador">❓</span>
+      </div>
+      <div id="vs">VS</div>
+      <div id="eleccion-pc">
+        <p>PC elige</p>
+        <span id="emoji-pc">❓</span>
+      </div>
+    </div>
+
+    <div id="mensaje-resultado">
+      <!-- El resultado (Ganaste / Perdiste / Empate) aparecerá aquí -->
+    </div>
+
+    <div id="botones">
+      <button class="btn-opcion" data-opcion="piedra">✊ Piedra</button>
+      <button class="btn-opcion" data-opcion="papel">✋ Papel</button>
+      <button class="btn-opcion" data-opcion="tijeras">✌️ Tijeras</button>
+    </div>
+
+    <button id="btn-reiniciar">🔄 Reiniciar partida</button>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
